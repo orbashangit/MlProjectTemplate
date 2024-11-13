@@ -1,0 +1,50 @@
+# yaml Global configuration settings template 
+
+project:
+  name: "Occupational Code Classification"
+  version: "1.0.0"
+
+data:
+  raw_data_path: "data/raw/"
+  interim_data_path: "data/interim/"
+  processed_data_path: "data/processed/"
+  test_size: 0.2
+  random_state: 42
+
+database:
+  host: "localhost"
+  port: 1433
+  database_name: "your_database"
+  username: "your_username"
+  password: "your_password"
+
+model:
+  xgboost:
+    params:
+      objective: "multi:softmax"
+      num_class: 100
+      max_depth: 6
+      learning_rate: 0.1
+      n_estimators: 100
+  bert:
+    model_name: "bert-base-uncased"
+    num_labels: 100
+
+training:
+  batch_size: 32
+  epochs: 10
+
+logging:
+  version: 1
+  disable_existing_loggers: False
+  formatters:
+    standard:
+      format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+  handlers:
+    console:
+      class: logging.StreamHandler
+      formatter: standard
+      level: INFO
+  root:
+    handlers: [console]
+    level: INFO
