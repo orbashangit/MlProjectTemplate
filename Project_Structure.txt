@@ -1,0 +1,53 @@
+project_name/
+├── data/
+│   ├── raw/                      # Raw CSV data files
+│   │   ├── example_raw_data.csv  # Example raw data file
+│   ├── processed/                # Processed data ready for model training
+│       ├── example_processed_data.csv # Example processed data file
+├── config/
+│   ├── config.yaml               # Global configuration file (paths, database connection info, etc.)
+├── src/
+│   ├── data/
+│   │   ├── data_loader.py        # Scripts to load data from CSV or MSSQL
+│   │   ├── data_cleaner.py       # Data preprocessing and feature engineering
+│   ├── model/
+│   │   ├── bert_model.py         # BERT-based model class
+│   │   ├── xgb_model.py          # XGBoost model class
+│   ├── pipeline/
+│   │   ├── trainer.py            # Orchestrates the training process
+│   │   ├── evaluator.py          # Evaluation metrics and model validation
+│   ├── utils/
+│       ├── utils.py              # Utility functions for the project
+├── tracking/
+│   ├── data_versioning.py        # Data and feature versioning logs
+│   ├── training_logs.py          # Training progress and logs
+│   ├── model_versioning.py       # Model versioning logs
+│   ├── production_tests.py       # Production testing logs
+├── mlflow/
+│   ├── mlproject.yaml            # MLflow project configuration file
+├── scripts/
+│   ├── data_processing.sh        # Shell script for data processing automation
+│   ├── run_training.sh           # Shell script for running training jobs
+│   ├── pre_production.sh         # Shell script for pre-production testing
+│   ├── production.sh             # Shell script for production deployment
+│   ├── main_data_preprocessing.py# Main script for data preprocessing
+│   ├── main_model_training.py    # Main script for model training
+│   ├── main_model_evaluation.py  # Main script for model evaluation
+├── notebooks/                    # Jupyter notebooks for EDA and prototyping
+│   ├── example_notebook.ipynb    # Example Jupyter notebook
+├── tests/
+│   ├── unit/                     # Unit tests for modules
+│   │   ├── test_data_loader.py   # Unit tests for data_loader.py
+│   │   ├── test_data_cleaner.py  # Unit tests for data_cleaner.py
+│   │   ├── test_bert_model.py    # Unit tests for bert_model.py
+│   │   ├── test_xgb_model.py     # Unit tests for xgb_model.py
+│   │   ├── test_trainer.py       # Unit tests for trainer.py
+│   │   ├── test_evaluator.py     # Unit tests for evaluator.py
+│   │   ├── test_utils.py         # Unit tests for utils.py
+│   ├── integration/              # Integration tests for end-to-end workflows
+│   │   ├── test_end_to_end.py    # Integration tests for the entire pipeline
+│   ├── qa/                       # Quality Assurance tests
+│       ├── test_production.py    # QA tests for production environment
+├── README.md                     # Project documentation
+├── requirements.txt              # Project dependencies
+├── azure-pipelines.yml           # Azure Pipelines configuration

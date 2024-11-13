@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn
+torch
+mlflow
+transformers
+xgboost
+sqlalchemy
+pyodbc
