@@ -32,7 +32,7 @@
 
 ## Overview
 
-Welcome to the **Occupational Code Classification MLOps Pipeline** project! This project is designed to build an end-to-end machine learning pipeline for classifying 4-digit occupational codes based on text data (survey responses) and demographic fields (age, gender, location, years of experience). The pipeline is structured to facilitate modularity, scalability, and maintainability, adhering to enterprise-level MLOps best practices.
+Welcome to the **MLOps Pipeline Template** project! This project is designed to build an end-to-end machine learning pipeline for classifying digit lables. The pipeline is structured to facilitate modularity, scalability, and maintainability, adhering to enterprise-level MLOps best practices.
 
 ---
 
